@@ -10,12 +10,12 @@ def hello():
 
 @app.route('/hi')
 def hello_name():
-    response = 'Hello ' + request.args.get('name')
-    return response
+    name = request.args.get('name')
+    return '''<h1>Hello {}</h1>'''.format(name)
 
 @app.route('/query-example')
 def query_example():
     # if key doesn't exist, returns None
     language = request.args.get('language')
-
     return '''<h1>The language value is: {}</h1>'''.format(language)
+    
