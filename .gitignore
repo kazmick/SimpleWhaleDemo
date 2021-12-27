@@ -1,0 +1,4 @@
+.envSimple/
+.github/
+__pycache__
+*.py[cod]
